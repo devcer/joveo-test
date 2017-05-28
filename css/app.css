@@ -1,0 +1,19 @@
+.score-select{
+	background-color: #F6F6F6;
+	height: 200px;
+	width: 600px;
+	margin-top: 150px;
+	text-align: center;
+	margin-left: 320px;
+}
+.score-why-select{
+	background-color: #F6F6F6;
+	height: 200px;
+	width: 800px;
+	margin-top: 150px;
+	text-align: center;
+	margin-left: 320px;
+}
+.button-div{
+	padding-top: 20px;
+}

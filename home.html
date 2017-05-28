@@ -1,0 +1,70 @@
+<div class="row">
+	<div class="col-md-8">
+		<h2>Menu</h2>
+		<h3>South Indian</h3>
+		<table>
+		  <thead>
+		  	<tr>
+		  		<td></td>
+		  		<td>Item Name</td>
+		  		<td>Price</td>
+		  	</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="x in southIndianMenu">
+				<td>{{$index+1}}</td>
+				<td>{{x.itemName}}</td>
+				<td>Rs.{{x.price}}</td>
+				<td>[ <button type="button" class="btn btn-link" ng-click="addItemToOrder(x)">+</button> ]</td>
+				<td>[ <button type="button" class="btn btn-link" ng-click="removeItemFromOrder(x)">-</button> ]</td>
+			</tr>
+		  </tbody>
+		</table>
+		<h3>North Indian</h3>
+		<table>
+		  <thead>
+		  	<tr>
+		  		<td></td>
+		  		<td>Item Name</td>
+		  		<td>Price</td>
+		  	</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="x in northIndianMenu">
+				<td>{{$index+1}}</td>
+				<td>{{x.itemName}}</td>
+				<td>Rs.{{x.price}}</td>
+				<td>[ <button type="button" class="btn btn-link" ng-click="addItemToOrder(x)">+</button> ]</td>
+				<td>[ <button type="button" class="btn btn-link" ng-click="removeItemFromOrder(x)">-</button> ]</td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+	<div class="col-md-4">
+		<h3>Order</h3>
+		<table>
+			<thead>
+				<tr>
+					<td>Item Name</td>
+					<td>Count</td>
+					<td>Amount</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in orders">
+					<td>{{x.itemName}}</td>
+					<td>{{x.count}}[<button type="button" class="btn btn-link" ng-click="addCountToOrder($index,x)">+</button>] [<button type="button" class="btn btn-link" ng-click="removeCountFromOrder($index,x)">-</button>]</td>
+					<td>{{x.amount}}</td>
+				</tr>
+				<tr>
+					<td><strong>Total Items</strong></td>
+					<td><strong>{{user.orderCount}}</strong></td>
+					<td><strong>{{user.totalAmount}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		<center>
+			<button type="button" class="btn btn-primary" ng-click="goToCheckoutSection()">Checkout</button>
+		</center>
+	</div>
+</div>

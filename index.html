@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foodzonline</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body ng-app="appModule" ng-controller="appController">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h1>foodzonline</h1>
+</div>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+	<a href="#home">Home</a> |
+	<a href="#order">Order</a>
+</div>
+</div>
+</div>
+<div class="container">
+<home ng-show="showHomeSection"></home>
+<checkout ng-show="showCheckoutSection"></checkout>
+<thankyou ng-show="showThankyouSection"></thankyou>
+</div>
+<!-- <h1>{{'santosh'+ ' viswanatham'}}</h1>
+<table>
+	<tr ng-repeat="x in phoneData">
+		<td>
+			{{x.age}}
+		</td>
+	</tr>
+</table> -->
+<!-- 	<div class="score-select" ng-show="showScoreSelect">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<h3>How likely are you to recommend AppVirality to a friend?</h3>		
+		</div>
+		<div class="col-md-1"></div>	
+	</div>
+	
+		<div class="button-div">
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(0)">0</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(1)">1</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(2)">2</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(3)">3</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(4)">4</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(5)">5</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(6)">6</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(7)">7</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(8)">8</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(9)">9</button>
+		<button type="button" class="btn btn-secondary" ng-click="scoreClicked(10)">10</button>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<p>Not likely</p>
+			</div>
+			<div class="col-md-6"></div>
+			<div class="col-md-3">
+				<p>Very likely</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="score-why-select" ng-hide="showScoreSelect">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<h3>Tell us a bit more about why you choose {{clickedScore}}</h3>		
+			</div>
+			<div class="col-md-1"></div>	
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<textarea rows="4" cols="50" ng-model="givenComment"></textarea>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<button class="btn btn-secondary btn-lg" ng-click="submitComment()">Submit</button>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+
+	<hr/>
+	<div class="row">
+	<div class="col-md-12">
+		<h3><center>Data</center></h3>
+	</div>
+	<div class="col-md-6">
+		<p><center>{{npsScore}}</center></p>
+	</div>
+	<div class="col-md-6">
+		<div style="text-align: center;">
+		<p>detractors:{{detractorsPercentage+"%"}}</p>
+		<p>passives:{{passivesPercentage+"%"}}</p>
+		<p>promoters:{{promotersPercentage+"%"}}</p>
+		</div>
+	</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-4">
+			<h4><center>Filter</center></h4>
+			<ul style="list-style-type: none">
+				<li><button class="btn btn-link">All</button></li>
+				<li><button class="btn btn-link">Promoters</button></li>
+				<li><button class="btn btn-link">Passives</button></li>
+				<li><button class="btn btn-link">Detractors</button></li>
+			</ul>
+		</div>
+		<div class="col-md-8">
+			<table>
+				<tr ng-repeat="x in comments">
+					<td></td>
+					<td>{{x.comment}}</td>
+				</tr>
+			</table>
+		</div>
+	</div> -->
+  <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

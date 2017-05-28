@@ -1,0 +1,72 @@
+
+<h3>Checkout</h3>
+<div class="row">
+	<div class="col-md-4">
+		<label for="firstName">First Name</label>
+		<input type="text" class="form-control" id="firstName" ng-model="user.firstName">		
+	</div>
+	<div class="col-md-4">
+		<label for="lastName">Last Name</label>
+		<input type="text" class="form-control" id="lastName" ng-model="user.lastName">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<label for="address1">Address 1</label>
+		<input type="text" class="form-control" id="address1" ng-model="user.address1">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<label for="address2">Address 2</label>
+		<input type="text" class="form-control" id="address2" ng-model="user.address2">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+	<label for="city">City</label>
+		<input type="text" class="form-control" id="city" ng-model="user.city">
+	</div>
+	<div class="col-md-4">
+	<label for="state">State</label>
+		<input type="text" class="form-control" id="state" ng-model="user.state">
+	</div>
+	<div class="col-md-4">
+	<label for="pin">Pin</label>
+		<input type="text" class="form-control" id="pin" pattern="[0-9]{6}" ng-model="user.pin">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<label for="phoneNumber">Phone number</label>
+		<input type="text" class="form-control" id="phoneNumber" pattern="[789][0-9]{9}" ng-model="user.phoneNumber">
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<h3>Order Summary</h3>
+		<table>
+			<thead>
+				<tr>
+					<td>Item Name</td>
+					<td>Count</td>
+					<td>Amount</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in orders">
+					<td>{{x.itemName}}</td>
+					<td>{{x.count}}[<button type="button" class="btn btn-link" ng-click="increaseQuantity()">+</button>] [<button type="button" class="btn btn-link" ng-click="increaseQuantity()">-</button>]</td>
+					<td>{{x.amount}}</td>
+				</tr>
+				<tr>
+					<td><strong>Total Items</strong></td>
+					<td><strong>{{user.orderCount}}</strong></td>
+					<td><strong>{{user.totalAmount}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<center><button type="button" class="btn btn-primary" ng-click="goToThankyouSection()">CONFIRM ORDER</button></center>
