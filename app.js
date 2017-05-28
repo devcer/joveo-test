@@ -7,7 +7,7 @@ app.controller('appController', function($scope, $http) {
   $scope.showHomeSection=true;
   $scope.showCheckoutSection=false;
   $scope.showThankyouSection=false; 
-  $scope.user.orderID=0;
+  $scope.orderID=0;
   $http.get("southMenu.json")
   .then(function(response){
     // for(var i=0;i<response.data.length;i++){
@@ -67,7 +67,7 @@ app.controller('appController', function($scope, $http) {
   }
 
   $scope.goToThankyouSection=function(){
-    $scope.user.orderID++;
+    $scope.orderID++;
     $scope.showHomeSection=false;
     $scope.showCheckoutSection=false;
     $scope.showThankyouSection=true;
